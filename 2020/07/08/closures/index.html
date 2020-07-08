@@ -146,24 +146,14 @@
 
         <div id="main" >
             <div class ="post_page_title_img" style="height: 25rem;background-image: url();background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;" >
-                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2 >Hello World</h2></a>
+                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2 >closures</h2></a>
             </div>
             <!-- Post -->
             <div class="typo" style="padding: 3rem;">
-                <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
+                <h1 id="闭包-LHS-RHS"><a href="#闭包-LHS-RHS" class="headerlink" title="闭包 LHS RHS"></a>闭包 LHS RHS</h1><h3 id="闭包的定义"><a href="#闭包的定义" class="headerlink" title="闭包的定义"></a>闭包的定义</h3><h6 id="一个嵌套在函数内部的函数引用了不是该函数的参数，也不属于该函数作用域的变量（自由变量），这个函数就叫闭包。"><a href="#一个嵌套在函数内部的函数引用了不是该函数的参数，也不属于该函数作用域的变量（自由变量），这个函数就叫闭包。" class="headerlink" title="一个嵌套在函数内部的函数引用了不是该函数的参数，也不属于该函数作用域的变量（自由变量），这个函数就叫闭包。"></a>一个嵌套在函数内部的函数引用了不是该函数的参数，也不属于该函数作用域的变量（<strong>自由变量</strong>），这个<strong>函数</strong>就叫闭包。</h6><h6 id="换个说法："><a href="#换个说法：" class="headerlink" title="换个说法："></a>换个说法：</h6><h6 id="闭包就是一个嵌套在函数内部，并且引用了自由变量的函数。自由变量是指不是该函数的参数，也不属于该函数作用域的变量。"><a href="#闭包就是一个嵌套在函数内部，并且引用了自由变量的函数。自由变量是指不是该函数的参数，也不属于该函数作用域的变量。" class="headerlink" title="闭包就是一个嵌套在函数内部，并且引用了自由变量的函数。自由变量是指不是该函数的参数，也不属于该函数作用域的变量。"></a>闭包就是一个嵌套在函数内部，并且引用了自由变量的<strong>函数</strong>。<strong>自由变量</strong>是指不是该函数的参数，也不属于该函数作用域的<strong>变量</strong>。</h6><h3 id="LHS"><a href="#LHS" class="headerlink" title="LHS"></a>LHS</h3><p><code>title = ‘bibao’</code></p>
+<h6 id="title在赋值操作的左侧，属于LHS。"><a href="#title在赋值操作的左侧，属于LHS。" class="headerlink" title="title在赋值操作的左侧，属于LHS。"></a>title在赋值操作的左侧，属于LHS。</h6><h6 id="L就是left（左），LHS意味着变量赋值或写入内存"><a href="#L就是left（左），LHS意味着变量赋值或写入内存" class="headerlink" title="L就是left（左），LHS意味着变量赋值或写入内存"></a>L就是left（左），LHS意味着变量赋值或写入内存</h6><h3 id="RHS"><a href="#RHS" class="headerlink" title="RHS"></a>RHS</h3><p><code>var content = title;
+console.log(title)</code></p>
+<h6 id="这个例子里的第一行有赋值操作，但title在操作的右侧，属于RHS。"><a href="#这个例子里的第一行有赋值操作，但title在操作的右侧，属于RHS。" class="headerlink" title="这个例子里的第一行有赋值操作，但title在操作的右侧，属于RHS。"></a>这个例子里的第一行有赋值操作，但title在操作的右侧，属于RHS。</h6><h6 id="R是right（右），RHS是变量查找或从内存中读取"><a href="#R是right（右），RHS是变量查找或从内存中读取" class="headerlink" title="R是right（右），RHS是变量查找或从内存中读取"></a>R是right（右），RHS是变量查找或从内存中读取</h6>
             </div>
 
             <!-- Post Comments -->
@@ -225,8 +215,8 @@ $('.btn_click_load').click(function() {
 -->
 <script type="text/javascript">
     var disqus_config = function () {
-        this.page.url = 'https://teohr.github.io/2020/06/11/hello-world/';  // Replace PAGE_URL with your page's canonical URL variable
-        this.page.identifier = 'https://teohr.github.io/2020/06/11/hello-world/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        this.page.url = 'https://teohr.github.io/2020/07/08/closures/';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'https://teohr.github.io/2020/07/08/closures/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
     };
 </script>
 
